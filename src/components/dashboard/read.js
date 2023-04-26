@@ -1,6 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useParams } from "../../../node_modules/react-router-dom/dist/index";
-import { selectUtility, setUnReadCount } from "../../redux/utility.slice";
+import { selectUtility } from "../../redux/utility.slice";
 import { useEffect, useState } from "react";
 
 export default function ReadMail() {
@@ -10,7 +10,6 @@ export default function ReadMail() {
     const userData = JSON.parse(localStorage.getItem('userData'));
     const userInfo = userData[localStorage.getItem('email')];
     const [data, setData] = useState({ content: '', subject: '', time: '', sender: '', recipients: [''] });
-    const dispatch = useDispatch();
 
     useEffect(() => {
         const list = userInfo[mail?.selectedCategory];

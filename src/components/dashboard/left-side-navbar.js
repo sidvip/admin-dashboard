@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { BarChart, BookFill, CardChecklist, CaretDown, CaretDownFill, CaretLeft, CaretLeftFill, Diamond, Display, EnvelopeFill, Laptop, PieChart } from "../../../node_modules/react-bootstrap-icons/dist/index";
+import { BarChart, BookFill, CardChecklist, CaretDown, CaretDownFill, CaretLeft, Diamond, Display, EnvelopeFill, Laptop, PieChart } from "../../../node_modules/react-bootstrap-icons/dist/index";
 import { selectUtility, setIsComposing } from "../../redux/utility.slice";
 import { useState } from "react";
 import { NavLink } from "../../../node_modules/react-router-dom/dist/index";
@@ -37,7 +37,7 @@ export default function LeftNavBar() {
         leftNav.open ?
             <div className="text-white flex flex-col h-full bg-[#2E3F50]">
                 <div className="flex flex-col p-10 pl-5 justify-start bg-[#233645]">
-                    <img arg='profile-img' src={userDetails.profile_url} className="rounded-full w-20 h-20 p-2" />
+                    <img alt='profile-img' src={userDetails.profile_url} className="rounded-full w-20 h-20 p-2" />
                     <label className="font-bold">{userDetails.name}</label>
                     <label className="text-gray-400 font-light text-sm flex gap-1 items-center">{userDetails.designation}<CaretDownFill className="cursor-pointer" /></label>
                 </div>

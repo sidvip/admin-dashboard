@@ -1,17 +1,15 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BellFill, BoxArrowRight, EnvelopeFill, List } from '../../../node_modules/react-bootstrap-icons/dist/index';
-import { Form, useLocation, useNavigate } from '../../../node_modules/react-router-dom/dist/index';
+import { Form, useNavigate } from '../../../node_modules/react-router-dom/dist/index';
 import { FormControl } from '../../../node_modules/react-bootstrap/esm/index';
-import Button from '../../../node_modules/react-bootstrap/esm/Button';
 import Tag from '../utility/tag';
 import { selectUtility, setLeftNavOpenState } from "../../redux/utility.slice";
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function TopNavBar() {
-    const { leftNav, mail } = useSelector(selectUtility);
+    const { leftNav } = useSelector(selectUtility);
     const navigate = useNavigate();
     const dispatch = useDispatch();
 

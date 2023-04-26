@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from '../../../node_modules/react-bootstrap/esm/ToastContainer';
 import { resetToast, selectUtility } from '../../redux/utility.slice';
@@ -11,7 +11,7 @@ export default function DashboardToast() {
 
     useEffect(() => {
         if (toast.show) {
-            let timerId = setTimeout(() => {
+            setTimeout(() => {
                 dispatch(resetToast());
             }, toast.timeOut);
         }

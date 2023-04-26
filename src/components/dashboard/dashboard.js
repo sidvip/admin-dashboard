@@ -1,15 +1,11 @@
-import { Button, Offcanvas, PageItem } from "../../../node_modules/react-bootstrap/esm/index";
-import { useEffect, useRef, useState } from "react";
-import OffcanvasHeader from "../../../node_modules/react-bootstrap/esm/OffcanvasHeader";
-import OffcanvasTitle from "../../../node_modules/react-bootstrap/esm/OffcanvasTitle";
-import OffcanvasBody from "../../../node_modules/react-bootstrap/esm/OffcanvasBody";
+import { Button } from "../../../node_modules/react-bootstrap/esm/index";
 import TopNavBar from "./nav-bar";
 import LeftNavBar from "./left-side-navbar";
 import { useDispatch, useSelector } from "react-redux";
-import { selectUtility, setIsComposing, setSelectedMailCategory, setUnReadCount } from "../../redux/utility.slice";
+import { selectUtility, setIsComposing, setSelectedMailCategory } from "../../redux/utility.slice";
 import { Envelope, FileEarmark, GearFill, InboxFill, SunFill, TagFill, Trash } from "../../../node_modules/react-bootstrap-icons/dist/index";
 import ComposeMail from "./compose";
-import { NavLink, Outlet, useNavigate } from "../../../node_modules/react-router-dom/dist/index";
+import { NavLink, Outlet } from "../../../node_modules/react-router-dom/dist/index";
 import DashboardToast from "../utility/toast";
 
 export default function Dashboard() {

@@ -8,7 +8,6 @@ import users from '../../mock-data/users.json';
 import { useDispatch } from 'react-redux';
 import { showToast } from '../../redux/utility.slice';
 import { useLocation } from '../../../node_modules/react-router-dom/dist/index';
-import Spinner from 'react-bootstrap/Spinner';
 
 export default function LoginForm() {
 

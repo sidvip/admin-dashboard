@@ -1,6 +1,4 @@
 import Modal from 'react-bootstrap/Modal';
-import Button from '../../../node_modules/react-bootstrap/esm/Button';
-import { useState } from 'react';
 import ListGroup from '../../../node_modules/react-bootstrap/esm/ListGroup';
 import { X } from '../../../node_modules/react-bootstrap-icons/dist/index';
 
