@@ -16,6 +16,7 @@ export default function DashboardToast() {
             }, toast.timeOut);
         }
 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [toast.show]);
 
     return (

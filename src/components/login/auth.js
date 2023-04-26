@@ -14,6 +14,7 @@ export default function AuthCheck({ children }) {
         } else {
             navigate('/login');
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return isLoggedIn ? <>{children}</> : <LoginPage />;

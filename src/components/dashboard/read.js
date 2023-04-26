@@ -22,6 +22,7 @@ export default function ReadMail() {
         });
         userData[localStorage.getItem('email')] = userInfo;
         localStorage.setItem('userData', JSON.stringify(userData));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
