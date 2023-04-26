@@ -29,7 +29,7 @@ export default function MailManagingTemplate() {
         <div className="bg-white shadow-md flex flex-col h-full">
             <div className="p-4">
                 <div className="flex justify-between">
-                    <label className="text-2xl ">{TEMPLATES[mail.selectedCategory]?.label} ({JSON.parse(localStorage.getItem('userData'))[localStorage.getItem('email')][mail?.selectedCategory]?.filter((e) => e.read === false).length || 0})</label>
+                    <label className="text-2xl ">{TEMPLATES[mail.selectedCategory]?.label} ({JSON.parse(localStorage.getItem('userData'))[localStorage.getItem('email')][mail?.selectedCategory]?.length || 0})</label>
                     <div className="flex gap-1">
                         <FormControl
                             className="w-72 border-r-none focus:outline-none focus:border-none"
@@ -68,7 +68,7 @@ export default function MailManagingTemplate() {
                         </section> : null
                 }
                 {
-                    mail.selectedCategory && userInfo[mail.selectedCategory].map((_e, _i) => (
+                    mail.selectedCategory && (userInfo[mail.selectedCategory]).reverse().map((_e, _i) => (
                         <Link to={`/read/${_e.id}`} key={_e.id}>
                             <section className="flex items-center h-14 p-4 border-b border-gray-200 hover:bg-slate-100 cursor-pointer" style={{ backgroundColor: !_e.read ? '#F9F8F8' : '' }}>
                                 <div className="flex items-center grow-[1] w-14 gap-3">

@@ -41,7 +41,7 @@ export default function ComposeMail() {
         const ccEmailList = checkAllElements(cc, emailList);
 
         console.log(to, cc, subject, body, ccEmailList, emailList);
-        if (!emailList.includes(to) || ccEmailList[1].length > 0) {
+        if (!emailList.includes(to) || (ccEmailList[1].length > 0 && cc.length > 1)) {
             dispatch(showToast({ data: { heading: 'Invalid email address', content: 'Enter a valid existing email address' }, show: true }));
             handleShow();
         } else {
@@ -80,6 +80,7 @@ export default function ComposeMail() {
                 "recipients": recipientNamesList,
                 "read": true
             })
+            dispatch(showToast({ data: { heading: 'Sent Email', content: 'Email sent successfully' }, show: true }));
             localStorage.setItem('userData', JSON.stringify(userData));
         }
     }

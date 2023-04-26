@@ -1,19 +1,23 @@
 import Form from 'react-bootstrap/Form';
 import InputGroup from '../../../node_modules/react-bootstrap/esm/InputGroup';
 import Row from '../../../node_modules/react-bootstrap/esm/Row';
-import { Lock, PcDisplay } from '../../../node_modules/react-bootstrap-icons/dist/index';
+import { Lock, PcDisplay, PersonFillGear } from '../../../node_modules/react-bootstrap-icons/dist/index';
 import Button from '../../../node_modules/react-bootstrap/esm/Button';
 import { useState } from 'react';
 import users from '../../mock-data/users.json';
 import { useDispatch } from 'react-redux';
 import { showToast } from '../../redux/utility.slice';
 import { useLocation } from '../../../node_modules/react-router-dom/dist/index';
+import ExistingEmailsList from '../dashboard/existing-email';
 
 export default function LoginForm() {
 
     const [data, setData] = useState({ email: "", password: "" });
     const dispatch = useDispatch();
     const location = useLocation();
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const handleSubmit = (event) => {
         const userInfo = users[data.email];
@@ -81,6 +85,8 @@ export default function LoginForm() {
                     Sign In
                 </Button>
             </Row>
+            <ExistingEmailsList show={show} handleClose={handleClose} />
+            <PersonFillGear className='text-4xl bg-cyan-500 rounded-full w-20 h-16 fixed top-10 right-10 shadow-md cursor-pointer' onClick={handleShow} />
         </Form>
     )
 }
