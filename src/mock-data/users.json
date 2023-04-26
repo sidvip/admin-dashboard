@@ -1,0 +1,219 @@
+{
+"john@gmail.com": 
+       {
+            "email": "john@gmail.com",
+            "password": "teacher",
+            "name": "John Smith",
+            "designation": "Art Director",
+            "profile_url": "https://randomuser.me/api/portraits/men/1.jpg",
+            "inbox": [
+                {
+                    "sender": "Michael Smith",
+                    "subject": "New Subject 1",
+                    "content": "This is a new app",
+                    "time": "4:32 AM",
+                    "id": 0,
+                    "recipients": ["John Smith"],
+                    "read": true
+                },
+                {
+                    "sender": "Arnav Smith",
+                    "subject": "New Subject 2",
+                    "content": "This is a new web",
+                    "time": "8:32 AM",
+                    "id": 1,
+                    "recipients": ["John Smith"],
+                    "read": true
+                },
+                {
+                    "sender": "Alex Smith",
+                    "subject": "New Subject 3",
+                    "content": "This is a new native",
+                    "time": "10:32 PM",
+                    "id": 2,
+                    "recipients": ["John Smith", "Rick Duck"],
+                    "read": false
+                },
+                {
+                    "sender": "Magnus Smith",
+                    "subject": "New Subject 4",
+                    "content": "This is a new orchestra",
+                    "time": "6:32 PM",
+                    "id": 3,
+                    "recipients": ["John Smith"],
+                    "read": true
+                },
+                {
+                    "sender": "Will Smith",
+                    "subject": "New Subject 5",
+                    "content": "This is a new city",
+                    "time": "3:32 AM",
+                    "id": 4,
+                    "recipients": ["John Smith"],
+                    "read": true
+                }
+            ],
+            "sent-mail": [],
+            "trash": []
+        },
+"rick@gmail.com":
+        {
+            "email": "rick@gmail.com",
+            "password": "professor",
+            "name": "Rick Duck",
+            "designation": "Chairman",
+            "profile_url": "https://randomuser.me/api/portraits/men/4.jpg",
+            "inbox": [],
+            "sent-mail": [],
+            "trash": []
+        },
+ "jeremy@gmail.com":
+        {
+            "email": "jeremy@gmail.com",
+            "password": "programmer",
+            "name": "Jeremy Anderson",
+            "designation": "Media Director",
+            "profile_url": "https://randomuser.me/api/portraits/men/2.jpg",
+            "inbox": [],
+            "sent-mail": [],
+            "trash": []
+        },
+ "kennedy@gmail.com":
+        {
+            "email": "kennedy@gmail.com",
+            "password": "professor",
+            "name": "Kennedy Carl",
+            "designation": "Film Director",
+            "profile_url": "https://randomuser.me/api/portraits/men/3.jpg",
+            "inbox": [],
+            "sent-mail": [],
+            "trash": []
+        },
+"derick@gmail.com":
+        {
+            "email": "derick@gmail.com",
+            "password": "hacker",
+            "name": "Derick Williams",
+            "designation": "Music Director",
+            "profile_url": "https://randomuser.me/api/portraits/men/5.jpg",
+            "inbox": [
+                {
+                    "subject": "Subject 1",
+                    "content": "This is a new app",
+                    "time": "8:32 PM",
+                    "id": 0,
+                    "read": false,
+                    "recipients": ["Derick Williams"],
+                    "sender": "Mac Smith"
+                },
+                {
+                    "subject": "Subject 2",
+                    "content": "This is a new web",
+                    "time": "5:32 PM",
+                    "id": 1,
+                    "read": true,
+                    "recipients": ["Derick Williams"],
+                    "sender": "Max Smith"
+                },
+                {
+                    "subject": "Subject 3",
+                    "content": "This is a new native",
+                    "time": "4:12 AM",
+                    "id": 2,
+                    "read": false,
+                    "recipients": ["Derick Williams"],
+                    "sender": "Jason Smith"
+                },
+                {
+                    "subject": "Subject 4",
+                    "content": "This is a new orchestra",
+                    "time": "11:02 AM",
+                    "id": 3,
+                    "read": true,
+                    "recipients": ["Derick Williams"],
+                    "sender": "Mike Smith"
+                },
+                {
+                    "subject": "Subject 5",
+                    "content": "This is a new city",
+                    "time": "1:52 AM",
+                    "id": 4,
+                    "read": true,
+                    "recipients": ["Derick Williams"],
+                    "sender": "Kim Smith"
+                }
+            ],
+            "sent-mail": [],
+            "trash": []
+        },
+"shawn@gmail.com":
+        {
+            "email": "shawn@gmail.com",
+            "password": "director",
+            "name": "Shawn Mendes",
+            "designation": "Choreographer",
+            "profile_url": "https://randomuser.me/api/portraits/men/8.jpg",
+            "inobx": [],
+            "sent-mail": [],
+            "trash": []
+        },
+"abrahim@gmail.com":
+        {
+            "email": "abrahim@gmail.com",
+            "password": "professor",
+            "name": "Abrahim Lincoln",
+            "designation": "Video Director",
+            "profile_url": "https://randomuser.me/api/portraits/men/7.jpg",
+            "inbox": [
+                {
+                    "subject": "New Subject 1",
+                    "content": "This is a new app",
+                    "time": "9:32 AM",
+                    "id": 5,
+                    "read": true,
+                    "recipients": ["Derick Williams"],
+                    "sender": "Tyson Smith"
+                },
+                {
+                    "subject": "New Subject 2",
+                    "content": "This is a new web",
+                    "time": "11:32 AM",
+                    "id": 6,
+                    "read": true,
+                    "recipients": ["Derick Williams"],
+                    "sender": "Jack Smith"
+                },
+                {
+                    "subject": "New Subject 3",
+                    "content": "This is a new native",
+                    "time": "2:32 PM",
+                    "id": 7,
+                    "read": false,
+                    "recipients": ["Derick Williams"],
+                    "sender": "Jim Smith"
+                },
+                {
+                    "subject": "New Subject 4",
+                    "content": "This is a new orchestra",
+                    "time": "10:35 AM",
+                    "id": 10,
+                    "read": true,
+                    "recipients": ["Derick Williams"],
+                    "sender": "Drake Smith"
+                }
+            ],
+            "sent-mail": [],
+            "trash": []
+        },
+ "donald@gmail.com":
+        {
+            "email": "donald@gmail.com",
+            "password": "professor",
+            "name": "Donald Duck",
+            "designation": "Managing Director",
+            "profile_url": "https://randomuser.me/api/portraits/men/10.jpg",
+            "inbox": [],
+            "sent-mail": [],
+            "trash": []
+        }
+}
