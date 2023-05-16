@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import { Send, X } from "../../../node_modules/react-bootstrap-icons/dist/index";
-import { Button } from "../../../node_modules/react-bootstrap/esm/index";
+import { Send, X } from "react-bootstrap-icons";
+import { Button } from "react-bootstrap";
 import { setIsComposing, showToast } from "../../redux/utility.slice";
 import { useState } from "react";
 import ExistingEmailsList from "./existing-email";
@@ -13,7 +13,6 @@ export default function ComposeMail() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
 
     const userData = JSON.parse(localStorage.getItem('userData'));
 
@@ -40,13 +39,13 @@ export default function ComposeMail() {
         const emailList = Object.keys(userData);
         const ccEmailList = checkAllElements(cc, emailList);
 
-        console.log(to, cc, subject, body, ccEmailList, emailList);
+        // console.log(to, cc, subject, body, ccEmailList, emailList);
         if (!emailList.includes(to) || (ccEmailList[1].length > 0 && cc.length > 1)) {
             dispatch(showToast({ data: { heading: 'Invalid email address', content: 'Enter a valid existing email address' }, show: true }));
             handleShow();
         } else {
             const recipientNamesList = [...ccEmailList[0], to].map((e) => userData[e].name);
-            console.log(userData);
+            // console.log(userData);
             userData[to]['inbox'].push(
                 {
                     "sender": userData[localStorage.getItem('email')].name,
@@ -95,12 +94,12 @@ export default function ComposeMail() {
             </header>
             <main>
                 <div className="flex flex-col">
-                    <input placeholder="To" className="text-md border-b p-2 outline-none" type="email" required />
-                    <input placeholder="CC: Place email in comma separated format" className="text-md border-b p-2 outline-none" type="text" />
-                    <input placeholder="Subject" className="text-md border-b p-2 outline-none" type="text" required />
+                    <input placeholder="To" className="text-md border-b p-2 outline-none" type="email" required id='email' />
+                    <input placeholder="CC: Place email in comma separated format" className="text-md border-b p-2 outline-none" type="text" id='cc' />
+                    <input placeholder="Subject" className="text-md border-b p-2 outline-none" type="text" required id='subject' />
                 </div>
-                <textarea className="w-full h-[500px] bg-slate-200 p-2 pb-0 resize-none outline-none" required />
-                <Button className="flex bg-[#00B493] hover:bg-[#00B493] items-center gap-2 w-full justify-center" type="submit"><Send /> Send</Button>
+                <textarea className="w-full h-[500px] bg-slate-200 p-2 pb-0 resize-none outline-none" required id='content' />
+                <Button className="flex bg-[#00B493] hover:bg-[#00B493] items-center gap-2 w-full justify-center" type="submit" id='send-email'><Send /> Send</Button>
             </main>
             <ExistingEmailsList show={show} handleClose={handleClose} />
         </form>

@@ -1,9 +1,9 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { BellFill, BoxArrowRight, EnvelopeFill, List } from '../../../node_modules/react-bootstrap-icons/dist/index';
-import { Form, useNavigate } from '../../../node_modules/react-router-dom/dist/index';
-import { FormControl } from '../../../node_modules/react-bootstrap/esm/index';
+import { BellFill, BoxArrowRight, EnvelopeFill, List } from 'react-bootstrap-icons';
+import { Form, useNavigate } from 'react-router-dom';
+import { FormControl } from 'react-bootstrap';
 import Tag from '../utility/tag';
 import { selectUtility, setLeftNavOpenState } from "../../redux/utility.slice";
 import { useDispatch, useSelector } from 'react-redux';

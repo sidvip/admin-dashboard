@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { useParams } from "../../../node_modules/react-router-dom/dist/index";
+import { useParams } from "react-router-dom";
 import { selectUtility } from "../../redux/utility.slice";
 import { useEffect, useState } from "react";
 

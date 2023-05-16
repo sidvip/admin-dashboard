@@ -1,13 +1,13 @@
 import Form from 'react-bootstrap/Form';
-import InputGroup from '../../../node_modules/react-bootstrap/esm/InputGroup';
-import Row from '../../../node_modules/react-bootstrap/esm/Row';
-import { Lock, PcDisplay, PersonFillGear } from '../../../node_modules/react-bootstrap-icons/dist/index';
-import Button from '../../../node_modules/react-bootstrap/esm/Button';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Row from 'react-bootstrap/Row';
+import { Lock, PcDisplay, PersonFillGear } from 'react-bootstrap-icons';
+import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import users from '../../mock-data/users.json';
 import { useDispatch } from 'react-redux';
 import { showToast } from '../../redux/utility.slice';
-import { useLocation } from '../../../node_modules/react-router-dom/dist/index';
+import { useLocation } from 'react-router-dom';
 import ExistingEmailsList from '../dashboard/existing-email';
 
 export default function LoginForm() {
@@ -44,13 +44,13 @@ export default function LoginForm() {
                 </label>
             </Row>
             <Form.Group as={Row} className='mt-4'>
-                <Form.Label htmlFor="inlineFormInputGroupUsername" visuallyHidden>
+                <Form.Label htmlFor="username" visuallyHidden>
                     Password
                 </Form.Label>
                 <InputGroup hasValidation>
                     <InputGroup.Text>@</InputGroup.Text>
                     <Form.Control
-                        id="inlineFormInputGroupUsername"
+                        id="username"
                         placeholder="Email"
                         onChange={(e) => setData({ ...data, email: e.target.value })}
                         type='email'
@@ -63,13 +63,13 @@ export default function LoginForm() {
                 </InputGroup>
             </Form.Group>
             <Form.Group as={Row} className='mt-4'>
-                <Form.Label htmlFor="inlineFormInputGroupUsername" visuallyHidden>
+                <Form.Label htmlFor="password" visuallyHidden>
                     Password
                 </Form.Label>
                 <InputGroup hasValidation>
                     <InputGroup.Text><Lock /></InputGroup.Text>
                     <Form.Control
-                        id="inlineFormInputGroupUsername"
+                        id="password"
                         placeholder="Password"
                         type='password'
                         onChange={(e) => setData({ ...data, password: e.target.value })}
@@ -81,7 +81,7 @@ export default function LoginForm() {
                 </InputGroup>
             </Form.Group>
             <Row className='mt-10 flex-1 flex justify-center'>
-                <Button variant="primary" type="submit" className='bg-blue-500 border-none w-[50%]' disabled={!(data.email && data.password)}>
+                <Button id='sign-in' variant="primary" type="submit" className='bg-blue-500 border-none w-[50%]' disabled={!(data.email && data.password)}>
                     Sign In
                 </Button>
             </Row>

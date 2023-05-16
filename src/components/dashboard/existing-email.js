@@ -1,6 +1,6 @@
 import Modal from 'react-bootstrap/Modal';
-import ListGroup from '../../../node_modules/react-bootstrap/esm/ListGroup';
-import { X } from '../../../node_modules/react-bootstrap-icons/dist/index';
+import { ListGroup } from 'react-bootstrap';
+import { X } from 'react-bootstrap-icons';
 
 export default function ExistingEmailsList({ show, handleClose }) {
     const userData = JSON.parse(localStorage.getItem('userData'));

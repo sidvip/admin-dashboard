@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { BarChart, BookFill, CardChecklist, CaretDown, CaretDownFill, CaretLeft, Diamond, Display, EnvelopeFill, Laptop, PieChart } from "../../../node_modules/react-bootstrap-icons/dist/index";
+import { BarChart, BookFill, CardChecklist, CaretDown, CaretDownFill, CaretLeft, Diamond, Display, EnvelopeFill, Laptop, PieChart } from "react-bootstrap-icons";
 import { selectUtility, setIsComposing } from "../../redux/utility.slice";
 import { useState } from "react";
-import { NavLink } from "../../../node_modules/react-router-dom/dist/index";
+import { NavLink } from "react-router-dom";
 export default function LeftNavBar() {
 
     const { leftNav } = useSelector(selectUtility);

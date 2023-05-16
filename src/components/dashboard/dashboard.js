@@ -1,12 +1,12 @@
-import { Button } from "../../../node_modules/react-bootstrap/esm/index";
+import { Button } from "react-bootstrap";
 import TopNavBar from "./nav-bar";
 import LeftNavBar from "./left-side-navbar";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUtility, setIsComposing, setSelectedMailCategory } from "../../redux/utility.slice";
-import { Envelope, FileEarmark, GearFill, InboxFill, SunFill, TagFill, Trash } from "../../../node_modules/react-bootstrap-icons/dist/index";
+import { Envelope, FileEarmark, GearFill, InboxFill, SunFill, TagFill, Trash } from "react-bootstrap-icons";
 import ComposeMail from "./compose";
-import { NavLink, Outlet } from "../../../node_modules/react-router-dom/dist/index";
-import DashboardToast from "../utility/toast";
+import { NavLink, Outlet } from "react-router-dom";
+// import DashboardToast from "../utility/toast";
 
 export default function Dashboard() {
 
@@ -43,7 +43,7 @@ export default function Dashboard() {
 
     return (
         <div className="flex h-screen">
-            <DashboardToast />
+            {/* <DashboardToast /> */}
             <div className={`h-full duration-700 ease-in-out ${leftNav.open ? 'lg:w-[14%] md:w-[14%] w-[80px]' : 'w-[80px]'} `}>
                 <LeftNavBar />
             </div>
